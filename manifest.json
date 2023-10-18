@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Easy Apply No Reply",
+  "version": "1.0",
+  "description": "Reminds you that it's not worth the effort to use \"Easy Apply\" on LinkedIn.",
+
+  "permissions": [
+    "activeTab",
+    "webNavigation"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.linkedin.com/jobs/**"],
+      "js": ["content.js"],
+      "all_frames": true
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
